@@ -3,8 +3,54 @@
 	<head>
 		<title>Fire Emblem Sorter</title>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<script type="text/javascript" src="/fesorter.js"></script>
 	</head>
-	<body>
-    <p>Nothing here yet.</p>
+    <body onLoad="startup()">
+  <div align="center">
+   <table id="mainTable">
+    <thead>
+     <tr>
+      <td colspan="9" class="tb_header">Battle No. <span id="lblCount">-</span><br>
+<span id="lblProgress">0</span>% sorted.<br>
+       <div align="center"><span id="GaGprog"></span></div>
+      </td>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td id="fldLeft" onClick="fnc_Sort(-1);" rowspan="2"><img src="http://i.imgur.com/iQczVTe.png"></td>
+	  <td style="border: 0px; width: 7px;" rowspan="2"></td>
+      <td id="fldMiddleT" onClick="fnc_Sort(0);"><p>Read <br>Instructions<br> Below</p>
+        </td>
+	  <td style="border: 0px; width: 7px;" rowspan="2"></td>
+      <td id="fldRight" onClick="fnc_Sort(1);" rowspan="2"><img src="http://i.imgur.com/vSk4zW3.png"></td>
+     </tr>
+     <tr>
+      <td id="fldMiddleB" onClick="fnc_Undo();"> Click to Start!</p></td>
+     </tr>
+    </tbody>
+    <tfoot>
+     <tr>
+       <input id="optImage" type="checkbox" checked>
+        <span class="tb_header">Display images while sorting.
+          </input>
+        </span></div></td>
+     </tr>
+    </tfoot>
+
+   </table>
+  </div>
+  <br>
+   <table id="optTable" align="center" width="450"></table>
+  <br>
+  <div id="ranTable" width="640px" align="center" class="tb" style="display:none;">
+<div>	
+</div>
+</div>
+  <div class="style4" id="resultField" style="text-align:center;">
+    <p class="instructions" style="text-align:center; font-size:15px;">
+<b>INSTRUCTIONS</b> <br>
+Text here?
+  </div>
 	</body>
 </html>
